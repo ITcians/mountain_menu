@@ -1,18 +1,18 @@
-<h3>
-Mountain Menu designed by <a href='https://itcians.com'>The ITcians</a>
-</h3>
-<img src="https://github.com/ITcians/mountain_menu/blob/f18bf64643dd91e9b87473e58bbcf475bcbd8f69/ezgif.com-gif-maker.gif">
 
-<p>A curved menu shaped like mountain crafted for your beautiful app.
-You can set your default animation and theme for this menu.
+import 'package:flutter/material.dart';
+import 'package:mountain_menu/mountain_menu.dart';
 
-Here is an example to start with:
-</p>
+class MenuDemo extends StatefulWidget {
+  const MenuDemo({Key? key}) : super(key: key);
 
-```dart
+  @override
+  State<MenuDemo> createState() => _MenuDemoState();
+}
+
 class _MenuDemoState extends State<MenuDemo> {
-  List<String> menus = ["HOME", "PROFILE", "NOTIFICATIONS"];
+  List<String> menus = ["SETTINGS", "SEARCH", "NOTIFICATIONS","HOME","PROFILE"];
   int selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,52 +40,38 @@ class _MenuDemoState extends State<MenuDemo> {
         ),
       ),
       bottomNavigationBar: MountainMenu(
-        color: Color(0xff9264EB),
+        color: const Color(0xff9264EB),
         menuIcon: Icons.menu,
         mainButtonElevation: 0,
-        mini:true,
-        curve: Curves.easeIn,
+        mini: false,
+        curve: Curves.bounceOut,
         buttonBackgroundColor: Colors.white,
         onChange: (val) async {
           setState(() {
             selectedIndex = val;
-            print(val);
           });
         },
         menus: const [
           Icon(
-            Icons.home,
+            Icons.settings,
             color: Color(0xff9264EB),
-            size: 24,
           ),
           Icon(
-            Icons.person,
+            Icons.search,
             color: Color(0xff9264EB),
-            size: 24,
           ),
           Icon(
             Icons.chat_bubble,
             color: Color(0xff9264EB),
-            size: 24,
+          ),Icon(
+            Icons.home,
+            color: Color(0xff9264EB),
+          ),Icon(
+            Icons.person,
+            color: Color(0xff9264EB),
           ),
         ],
       ),
     );
   }
 }
-```
-<b>Properties:</b>
-<ul>
-<li>color: To change mountain's color</li>
-<li>menuIcon: To change mountain's main icon</li>
-<li>menus: List of three menu widgets</li>
-<li>mini: Change the size of menu to mini and expanded</li>
-<li>mainButtonElevation: To add elevation to main button</li>
-<li>buttonBackgroundColor: To change background color of menu buttons</li>
-<li>iconColor: To change color of menu icons</li>
-<li>onChange: A menu change listener</li>
-<li>curve: Animation Curve</li>
-<li>borderWith: Border with of main menu button</li>
-<li>duration: Animation duration</li>
-<li>borderColor: To change border color of main menu</li>
-</ul>
