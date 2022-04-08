@@ -2,7 +2,7 @@
 Mountain Menu designed by <a href='https://itcians.com'>The ITcians</a>
 </h3>
 
-<img src="video/mountain_menu.gif">
+<img src="video/mountain_menu.gif" width='200' height='200'>
 <p>A curved menu shaped like mountain crafted for your beautiful app.
 You can set your default animation and theme for this menu.
 
