@@ -11,7 +11,7 @@ Here is an example to start with:
 
 ```dart
 class _MenuDemoState extends State<MenuDemo> {
-  List<String> menus = ["HOME", "PROFILE", "NOTIFICATIONS"];
+  List<String> menus = ["SETTINGS", "SEARCH", "NOTIFICATIONS","HOME","PROFILE"];
   int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
@@ -40,33 +40,35 @@ class _MenuDemoState extends State<MenuDemo> {
         ),
       ),
       bottomNavigationBar: MountainMenu(
-        color: Color(0xff9264EB),
+        color: const Color(0xff9264EB),
         menuIcon: Icons.menu,
         mainButtonElevation: 0,
-        mini:true,
-        curve: Curves.easeIn,
+        mini: false,
+        curve: Curves.bounceOut,
         buttonBackgroundColor: Colors.white,
         onChange: (val) async {
           setState(() {
             selectedIndex = val;
-            print(val);
           });
         },
         menus: const [
           Icon(
-            Icons.home,
+            Icons.settings,
             color: Color(0xff9264EB),
-            size: 24,
           ),
           Icon(
-            Icons.person,
+            Icons.search,
             color: Color(0xff9264EB),
-            size: 24,
           ),
           Icon(
             Icons.chat_bubble,
             color: Color(0xff9264EB),
-            size: 24,
+          ),Icon(
+            Icons.home,
+            color: Color(0xff9264EB),
+          ),Icon(
+            Icons.person,
+            color: Color(0xff9264EB),
           ),
         ],
       ),
