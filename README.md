@@ -1,7 +1,7 @@
 <h3>
 Mountain Menu designed by <a href='https://itcians.com'>The ITcians</a>
 </h3>
-<img src="https://github.com/ITcians/mountain_menu/blob/f18bf64643dd91e9b87473e58bbcf475bcbd8f69/ezgif.com-gif-maker.gif">
+![default](video/mountain_menu.gif)
 
 <p>A curved menu shaped like mountain crafted for your beautiful app.
 You can set your default animation and theme for this menu.
